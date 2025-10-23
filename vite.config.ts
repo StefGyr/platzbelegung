@@ -1,8 +1,11 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from "vite"
+import react from "@vitejs/plugin-react"
 
-// ❗ Falls dein Repo anders heißt, ersetze 'platzbelegung' unten entsprechend.
+// ⚠️ ganz wichtig: Base-URL für GitHub Pages muss deinem Repo-Namen entsprechen!
 export default defineConfig({
   plugins: [react()],
-  base: '/platzbelegung/',
+  base: "/platzbelegung/",
+  build: {
+    outDir: "dist",
+  },
 })
